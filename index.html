@@ -4,9 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reserve Your Spot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      font-family: 'Quicksand', sans-serif;
       margin: 0;
       padding: 20px 10px;
       background-color: #ffd6e8;
@@ -73,34 +74,35 @@
       }
     }
 
-    /* Floating hearts */
+    /* Floating hearts behind */
     .heart {
       position: absolute;
-      width: 20px;
-      height: 20px;
-      background: red;
+      width: 18px;
+      height: 18px;
+      background: #f69acb;
       transform: rotate(45deg);
-      animation: float 10s linear infinite;
-      opacity: 0.7;
+      animation: float 12s linear infinite;
+      opacity: 0.4;
+      z-index: 0;
     }
 
     .heart::before,
     .heart::after {
       content: "";
       position: absolute;
-      width: 20px;
-      height: 20px;
-      background: red;
+      width: 18px;
+      height: 18px;
+      background: #f69acb;
       border-radius: 50%;
     }
 
     .heart::before {
-      top: -10px;
+      top: -9px;
       left: 0;
     }
 
     .heart::after {
-      left: -10px;
+      left: -9px;
       top: 0;
     }
 
@@ -110,7 +112,7 @@
         opacity: 0;
       }
       50% {
-        opacity: 0.8;
+        opacity: 0.5;
       }
       100% {
         transform: translateY(-10vh) scale(1.2) rotate(45deg);
@@ -123,10 +125,10 @@
 
   <!-- Floating heart elements -->
   <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
-  <div class="heart" style="left: 25%; animation-delay: 2s;"></div>
-  <div class="heart" style="left: 50%; animation-delay: 4s;"></div>
-  <div class="heart" style="left: 70%; animation-delay: 6s;"></div>
-  <div class="heart" style="left: 85%; animation-delay: 8s;"></div>
+  <div class="heart" style="left: 30%; animation-delay: 3s;"></div>
+  <div class="heart" style="left: 55%; animation-delay: 6s;"></div>
+  <div class="heart" style="left: 75%; animation-delay: 9s;"></div>
+  <div class="heart" style="left: 90%; animation-delay: 12s;"></div>
 
   <div class="details">
     <h1>You're Invited!</h1>
