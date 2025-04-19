@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserve Your Spot</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      margin: 0;
+      padding: 20px 10px;
+      background-color: #ffd6e8;
+      background-image: radial-gradient(#ffb6c1 8%, transparent 8%), radial-gradient(#ffb6c1 8%, transparent 8%);
+      background-position: 0 0, 30px 30px;
+      background-size: 60px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .details {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 16px;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      z-index: 1;
+    }
+
+    .details h1 {
+      margin-bottom: 12px;
+      font-size: 24px;
+      color: #d63384;
+    }
+
+    .details p {
+      margin: 6px 0;
+      font-size: 16px;
+      color: #444;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 16px;
+      padding: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      width: 100%;
+      max-width: 420px;
+      z-index: 1;
+    }
+
+    iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    @media (min-width: 600px) {
+      .details h1 {
+        font-size: 28px;
+      }
+      .details p {
+        font-size: 18px;
+      }
+      iframe {
+        height: 750px;
+      }
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 10s linear infinite;
+      opacity: 0.7;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) scale(1) rotate(45deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 0.8;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating heart elements -->
+  <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="heart" style="left: 25%; animation-delay: 2s;"></div>
+  <div class="heart" style="left: 50%; animation-delay: 4s;"></div>
+  <div class="heart" style="left: 70%; animation-delay: 6s;"></div>
+  <div class="heart" style="left: 85%; animation-delay: 8s;"></div>
+
+  <div class="details">
+    <h1>You're Invited!</h1>
+    <p><strong>Date:</strong> Sunday, April 27 at 5 PM</p>
+    <p><strong>Place:</strong> AGORA – Achrafieh / Sodeco</p>
+    <p><strong>Dress Code:</strong> Cute, your vibes</p>
+  </div>
+
+  <div class="form-container">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe6jhdl8nhpdZHbwMmDtk9l5pmjGgTcDvE6AjdJ8v49bq5Wew/viewform?embedded=true" allowfullscreen></iframe>
+  </div>
+
+</body>
+</html>
