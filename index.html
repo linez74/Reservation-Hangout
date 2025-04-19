@@ -74,35 +74,34 @@
       }
     }
 
-    /* Floating hearts behind */
+    /* Floating hearts from old version */
     .heart {
       position: absolute;
-      width: 18px;
-      height: 18px;
-      background: #f69acb;
+      width: 20px;
+      height: 20px;
+      background: red;
       transform: rotate(45deg);
-      animation: float 12s linear infinite;
-      opacity: 0.4;
-      z-index: 0;
+      animation: float 10s linear infinite;
+      opacity: 0.7;
     }
 
     .heart::before,
     .heart::after {
       content: "";
       position: absolute;
-      width: 18px;
-      height: 18px;
-      background: #f69acb;
+      width: 20px;
+      height: 20px;
+      background: red;
       border-radius: 50%;
     }
 
     .heart::before {
-      top: -9px;
+      top: -10px;
       left: 0;
     }
 
     .heart::after {
-      left: -9px;
+      left: -10px;
       top: 0;
     }
 
@@ -112,7 +111,7 @@
         opacity: 0;
       }
       50% {
-        opacity: 0.5;
+        opacity: 0.8;
       }
       100% {
         transform: translateY(-10vh) scale(1.2) rotate(45deg);
@@ -125,10 +124,10 @@
 
   <!-- Floating heart elements -->
   <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
-  <div class="heart" style="left: 30%; animation-delay: 3s;"></div>
-  <div class="heart" style="left: 55%; animation-delay: 6s;"></div>
-  <div class="heart" style="left: 75%; animation-delay: 9s;"></div>
-  <div class="heart" style="left: 90%; animation-delay: 12s;"></div>
+  <div class="heart" style="left: 25%; animation-delay: 2s;"></div>
+  <div class="heart" style="left: 50%; animation-delay: 4s;"></div>
+  <div class="heart" style="left: 70%; animation-delay: 6s;"></div>
+  <div class="heart" style="left: 85%; animation-delay: 8s;"></div>
 
   <div class="details">
     <h1>You're Invited!</h1>
